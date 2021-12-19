@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "task": "do laundry",
+        "detail": "complete my laundry by the end of thne day",
+        "priority": 1,
+        "createdAt": "",
+        "updatedAt": ""
+    }
+]
