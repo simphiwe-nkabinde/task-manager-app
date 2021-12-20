@@ -1,9 +1,10 @@
 <div class="container">
-    <div class="my-4">
-        <h3 class="display-4 text-center text-secondary">All Users</h3>
+    <div class="my-4 text-center ">
+        <h3 class="display-4 text-secondary">All Users</h3>
+        <p class="text-muted">Select an existing user or add a new user</p>
     </div>
     <app-new-user></app-new-user>
     <div *ngFor="let user of usernames">
-      <app-user-item></app-user-item>
+      <app-user-item [username]=user></app-user-item>
     </div>
 </div>

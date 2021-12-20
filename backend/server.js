@@ -3,6 +3,9 @@ const app = express();
 const port = 3000;
 const fs = require('fs');
 const { uuid } = require('uuidv4');
+const cors = require('cors')
+
+app.use(cors());
 
 
 //get all user names
@@ -43,10 +46,22 @@ app.delete('/api/:username/:id', (req, res) => {
 //Utiility functions
 function getAllUsernames() {
     try {
-        return fs.readdirSync('./users', {withFileTypes: false});
+        let namesArr = fs.readdirSync('./users', {withFileTypes: false});
+        for (let i = 0; i < namesArr.length; i++) {
+            namesArr[i] = namesArr[i].replace('.json', ''); //removes .json extention from username
+        }
+        return namesArr
     } catch(e) {
         return null
     }   
+}
+// create new user
+function addNewUser() {
+    try {
+
+    } catch(e) {
+        return null;
+    }
 }
 
 function getUserTasks(username) {

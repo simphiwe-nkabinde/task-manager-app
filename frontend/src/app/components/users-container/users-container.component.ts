@@ -20,7 +20,6 @@ export class UsersContainerComponent implements OnInit {
     this.userService.getUsers()
       .subscribe(data => {
         this.usernames = data;
-        console.log(data);
       },
       err => {
         console.log(err);
