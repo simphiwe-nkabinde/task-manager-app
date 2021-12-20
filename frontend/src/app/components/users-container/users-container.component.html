@@ -3,10 +3,7 @@
         <h3 class="display-4 text-center text-secondary">All Users</h3>
     </div>
     <app-new-user></app-new-user>
-    <div>
-      <app-user-item></app-user-item>
-      <app-user-item></app-user-item>
-      <app-user-item></app-user-item>
+    <div *ngFor="let user of usernames">
       <app-user-item></app-user-item>
     </div>
 </div>
