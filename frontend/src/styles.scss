@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-icons/font/bootstrap-icons.scss';
+
+.shadow-onhover:hover {
+    @extend .shadow-sm;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.gradient-blue {
+    background: linear-gradient(to right, #0066cc 0%, #8bc34a 100%);
+}
+.text-spacing {
+    letter-spacing: 20px;
+}
