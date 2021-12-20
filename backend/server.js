@@ -19,6 +19,11 @@ app.get('/api/:username', (req, res) => {
     res.send(JSON.stringify(getUserTasks(user)))
 })
 
+app.post('/api/:username', (req, res) => {
+    let user = req.params.username;
+    addNewUser(user);
+})
+
 //add new task
 app.post('/api/:username', (req, res) => {
     let username = req.params.username;
@@ -56,9 +61,9 @@ function getAllUsernames() {
     }   
 }
 // create new user
-function addNewUser() {
+function addNewUser(username) {
     try {
-
+        fs.writeFileSync('users/' + username + '.json', "[]")
     } catch(e) {
         return null;
     }
