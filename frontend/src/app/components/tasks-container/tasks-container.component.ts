@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-tasks-container',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TasksContainerComponent implements OnInit {
 
-  constructor() { }
+  tasks?: object[];
+  username?: any;
+
+  constructor(
+    private userService: UserService,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.username = this.route.snapshot.url[1];
+    this.getTasks();
+  }
+
+  getTasks(): void  {
+    this.userService.getUserTasks(this.username)
+      .subscribe(data => {
+        this.tasks = data;
+      },
+      err => {
+        console.log(err);
+      })
   }
 
 }

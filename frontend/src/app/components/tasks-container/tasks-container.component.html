@@ -4,11 +4,7 @@
         <p class="text-muted">Select view and update your tasks</p>
     </div>
     <app-new-task></app-new-task>
-    <div>
-      <app-task-item ></app-task-item>
-      <app-task-item ></app-task-item>
-      <app-task-item ></app-task-item>
-      <app-task-item ></app-task-item>
-      <app-task-item ></app-task-item>
+    <div *ngFor="let task of tasks">
+      <app-task-item [taskItem]=task></app-task-item>
     </div>
 </div>

@@ -22,4 +22,8 @@ export class UserService {
   addNewUser(username: string): Observable<any> {
     return this.http.post(baseUrl + '/' + username, null);
   }
+
+  getUserTasks(username: string): Observable<any> {
+    return this.http.get(baseUrl + '/' + username)
+  }
 }
