@@ -9,8 +9,9 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class TasksContainerComponent implements OnInit {
 
-  tasks?: object[];
+  tasks: object[] = [];
   username?: any;
+  tasksLength: any = TasksContainerComponent.length;
 
   constructor(
     private userService: UserService,
@@ -19,12 +20,14 @@ export class TasksContainerComponent implements OnInit {
   ngOnInit(): void {
     this.username = this.route.snapshot.url[1];
     this.getTasks();
+
   }
 
   getTasks(): void  {
     this.userService.getUserTasks(this.username)
       .subscribe(data => {
         this.tasks = data;
+        this.tasksLength = this.tasks.length;
       },
       err => {
         console.log(err);

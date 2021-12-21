@@ -90,8 +90,8 @@ function addTask(username, task) {
         task: task.task,
         detail: task.detail,
         priority: task.priority,
-        createdAt: Date.now().toString(),
-        updatedAt: Date.now().toString()
+        createdAt: `${new Date().toDateString()} ${new Date().toLocaleTimeString()}`,
+        updatedAt: `${new Date().toDateString()} ${new Date().toLocaleTimeString()}`
     }
     userTasks.push(newTask)
     fs.writeFileSync('users/' + username + '.json', JSON.stringify(userTasks))
@@ -113,11 +113,11 @@ function updateTask(username, id, updatedTask) {
     const userTasks = getUserTasks(username)
     for (let task of userTasks) {
         if (task.id === id) {
-            task['task'] = updatedTask.country
-            task['detail'] = updatedTask.detail
-            task['priority'] = updatedTask.priority
-            task['updatedAt'] = updatedTask.updatedAt
-            fs.writeFileSync('users/' + username + '.json', JSON.stringify(userTasks))
+            task['task'] = updatedTask.country;
+            task['detail'] = updatedTask.detail;
+            task['priority'] = updatedTask.priority;
+            task['updatedAt'] = `${new Date().toDateString()} ${new Date().toLocaleTimeString()}`;
+            fs.writeFileSync('users/' + username + '.json', JSON.stringify(userTasks));
             return true;
         }
     }
