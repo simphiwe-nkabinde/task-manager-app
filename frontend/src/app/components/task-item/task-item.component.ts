@@ -16,7 +16,6 @@ export class TaskItemComponent implements OnInit {
   }
 
   showMoreToggle(): void {
-    console.log('show more toggle clicked')
     this.showMore = !this.showMore;
   }
 

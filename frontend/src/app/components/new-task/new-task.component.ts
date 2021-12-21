@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewTaskComponent implements OnInit {
 
+  showMore: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showMoreToggle(): void {
+    this.showMore = !this.showMore;
   }
 
 }

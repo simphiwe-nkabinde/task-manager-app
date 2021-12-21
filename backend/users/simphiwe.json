@@ -5,8 +5,8 @@
         "detail": "complete my laundry by the end of thne day",
         "priority": 1,
         "completed": false,
-        "createdAt": "",
-        "updatedAt": ""
+        "createdAt": "Fri Dec 17 2021 00:00:00 GMT+0200 (South Africa Standard Time)",
+        "updatedAt": "Fri Dec 17 2021 00:00:00 GMT+0200 (South Africa Standard Time)"
     },
     {
         "id": 2,
@@ -14,15 +14,15 @@
         "detail": "wash the dishes before the sun sets",
         "priority": 2,
         "completed": true,
-        "createdAt": "",
-        "updatedAt": ""
+        "createdAt": "Fri Dec 17 2021 00:00:00 GMT+0200 (South Africa Standard Time)",
+        "updatedAt": "Fri Dec 17 2021 00:00:00 GMT+0200 (South Africa Standard Time)"
     },{
         "id": 3,
         "task": "walk the dog",
         "detail": "take a 15 minute walk with the dog",
         "priority": 3,
         "completed": false,
-        "createdAt": "",
-        "updatedAt": ""
+        "createdAt": "Fri Dec 17 2021 00:00:00 GMT+0200 (South Africa Standard Time)",
+        "updatedAt": "Fri Dec 17 2021 00:00:00 GMT+0200 (South Africa Standard Time)"
     }
 ]
