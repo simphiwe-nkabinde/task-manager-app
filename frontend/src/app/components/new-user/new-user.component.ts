@@ -25,5 +25,6 @@ export class NewUserComponent implements OnInit {
         console.log(err)
       }
     )
+    window.location.reload()
   }
 }
