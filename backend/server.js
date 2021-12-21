@@ -19,9 +19,13 @@ app.get('/api/:username', (req, res) => {
     res.send(JSON.stringify(getUserTasks(user)))
 })
 
+//add new user
 app.post('/api/:username', (req, res) => {
+    console.log('post request made');
     let user = req.params.username;
+    console.log('new username: ' + user)
     addNewUser(user);
+    res.send('New user added: ' + user)
 })
 
 //add new task
