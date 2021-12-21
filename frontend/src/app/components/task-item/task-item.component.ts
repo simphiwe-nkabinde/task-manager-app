@@ -8,14 +8,16 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TaskItemComponent implements OnInit {
 
   @Input() taskItem?: any;
+  showMore: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  showMore(): void {
-    
+  showMoreToggle(): void {
+    console.log('show more toggle clicked')
+    this.showMore = !this.showMore;
   }
 
 }

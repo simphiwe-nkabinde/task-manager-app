@@ -4,6 +4,7 @@
         "task": "do laundry",
         "detail": "complete my laundry by the end of thne day",
         "priority": 1,
+        "completed": false,
         "createdAt": "",
         "updatedAt": ""
     },
@@ -12,6 +13,7 @@
         "task": "wash dishes",
         "detail": "wash the dishes before the sun sets",
         "priority": 2,
+        "completed": true,
         "createdAt": "",
         "updatedAt": ""
     },{
@@ -19,6 +21,7 @@
         "task": "walk the dog",
         "detail": "take a 15 minute walk with the dog",
         "priority": 3,
+        "completed": false,
         "createdAt": "",
         "updatedAt": ""
     }
