@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TasksContainerComponent } from './components/tasks-container/tasks-container.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { NewTaskComponent } from './components/new-task/new-task.component';
+import { PriorityPipe } from './pipes/priority.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NewTaskComponent } from './components/new-task/new-task.component';
     UsersContainerComponent,
     TasksContainerComponent,
     TaskItemComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    PriorityPipe
   ],
   imports: [
     BrowserModule,
